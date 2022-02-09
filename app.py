@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__) 
 
-file_name = "/models/logistic_model.sav"
+file_name = "models/logistic_model.sav"
 loaded_model = pickle.load(open(file_name, 'rb'))
 
 def prediction(s_l, s_w, p_l, p_w, loaded_model): 
