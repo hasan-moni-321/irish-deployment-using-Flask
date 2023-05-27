@@ -9,7 +9,7 @@ file_name = "models/logistic_model.sav"
 loaded_model = pickle.load(open(file_name, 'rb'))
 
 def prediction(s_l, s_w, p_l, p_w, loaded_model): 
-    pre_data = np.array([s_l, s_w, p_l, p_w]) 
+    pre_data = np.array([s_l, s_w, p_l, p_w], dtype=float) 
     pre_data_reshape = pre_data.reshape(1, -1) 
     pred_result = loaded_model.predict(pre_data_reshape)  
     return pred_result[0]
